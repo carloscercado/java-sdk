@@ -14,6 +14,7 @@ import com.ning.http.client.AsyncHttpClientConfig;
 import com.ning.http.client.AsyncHttpClient.BoundRequestBuilder;
 import com.ning.http.client.FluentStringsMap;
 import com.ning.http.client.Response;
+import java.math.BigDecimal;
 
 public class Meli {
     
@@ -53,7 +54,7 @@ public class Meli {
     
         private String accessToken;
         private String refreshToken;
-        private Long clientId;
+        private BigDecimal clientId;
         private String clientSecret;
         private AsyncHttpClient http;
         /** news **/
@@ -70,18 +71,18 @@ public class Meli {
             http = new AsyncHttpClient(cf);
         } 
 
-        public Meli(Long clientId, String clientSecret) {
+        public Meli(BigDecimal clientId, String clientSecret) {
                 this.clientId = clientId;
                 this.clientSecret = clientSecret;
         }
 
-        public Meli(Long clientId, String clientSecret, String accessToken) {
+        public Meli(BigDecimal clientId, String clientSecret, String accessToken) {
                 this.accessToken = accessToken;
                 this.clientId = clientId;
                 this.clientSecret = clientSecret;
         }
 
-        public Meli(Long clientId, String clientSecret, String accessToken, String refreshToken) {
+        public Meli(BigDecimal clientId, String clientSecret, String accessToken, String refreshToken) {
                 this.accessToken = accessToken;
                 this.clientId = clientId;
                 this.clientSecret = clientSecret;
